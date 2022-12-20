@@ -1,0 +1,21 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    "curl -L https://foundry.paradigm.xyz | bash",
+    "~/.foundry/bin/foundryup"
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "forge b --watch": {
+      "name": "Watch & Test",
+      "command": "~/.foundry/bin/forge t -vvvv --watch --run-all",
+      "runAtStart": true
+    },
+    "chiesel": {
+      "name": "REPL",
+      "command": "~/.foundry/bin/chisel",
+      "runAtStart": true
+    }
+  }
+}
